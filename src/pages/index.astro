@@ -1,65 +1,108 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
-<Layout title="Maya Greenfeld - Private Chef">
-  <div class="relative">
-    <div class="bg-gradient-to-r from-gray-50 to-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div class="text-center">
-          <h1 class="text-5xl font-bold text-gray-900 mb-6">
-            Exceptional Culinary Experiences
-          </h1>
-          <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Private chef services bringing restaurant-quality dining to your home. 
-            Crafting memorable meals with fresh, seasonal ingredients and personalized menus.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" class="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors">
-              Book a Consultation
-            </a>
-            <a href="/recipes" class="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">
-              View Recipes
-            </a>
-          </div>
-        </div>
+<Layout title="mouthful by Maya Greenfeld">
+  <!-- Photo Collage Section -->
+  <section class="relative">
+    <div class="w-full h-96 md:h-[700px] overflow-hidden">
+      <img 
+        src="/food-collage.jpg" 
+        alt="Maya's food photography collage" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- Short Intro Section -->
+  <section class="bg-pink-50 py-16">
+    <div class="max-w-4xl mx-auto px-8 sm:px-12 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-4xl font-light text-pink-900 mb-8 leading-snug md:leading-normal">
+        Maya Greenfeld is a <span class="font-semibold">personal chef</span>, <span class="font-semibold">recipe developer, tester, and editor</span>, and <span class="font-semibold">dinner party curator</span> based in New York City
+      </h1>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="bg-pink-200 py-16">
+    <div class="max-w-4xl mx-auto px-8 sm:px-12 lg:px-8">
+      <div class="prose max-w-none">
+        <p class="text-lg text-pink-900 leading-relaxed mb-6">
+          <strong>Hi, I'm Maya!</strong> Welcome and thank you for being here. I'm a professionally-trained chef, recipe developer/tester/editor for cookbooks, dinner (or any time of day) party curator, and content creator. I'm the author of <a href="https://mayagreenfeld.substack.com/" target="_blank" class="font-semibold text-pink-900 hover:underline transition-all">Mouthful by Maya</a> on Substack, where I share recipes, menus, and musings all about food and cooking that will hopefully inspire you in your own kitchen.
+        </p>
+        <p class="text-lg text-pink-900 leading-relaxed mb-6">
+          My culinary career began while working as a prep cook at Misi in Williamsburg for the summer in college. After graduating from Wake Forest University, I worked as a line cook at King in SoHo, an unabashedly seasonal restaurant. I trained at the Institute of Culinary Education in their Health Supportive Program and completed my externship in the test kitchen at Martha Stewart & Marley Spoon.
+        </p>
+        <p class="text-lg text-pink-900 leading-relaxed">
+          I live in New York City and would love to cook for you soon!
+        </p>
       </div>
     </div>
-    
-    <section class="py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Custom Menus</h3>
-            <p class="text-gray-600">Personalized menus tailored to your dietary preferences and special occasions.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m0 0v-6a1 1 0 011-1h2a1 1 0 011 1v6m3 0a1 1 0 001-1V10M9 21h6"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">In-Home Service</h3>
-            <p class="text-gray-600">Professional cooking in the comfort of your own kitchen and dining room.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Fresh Ingredients</h3>
-            <p class="text-gray-600">Locally sourced, seasonal ingredients prepared with passion and expertise.</p>
-          </div>
-        </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="bg-pink-50 py-16">
+    <div class="max-w-2xl mx-auto px-8 sm:px-12 lg:px-8 text-center">
+      <h2 class="text-3xl font-semibold text-pink-900 mb-4">Mouthful by Maya</h2>
+      <p class="text-lg text-pink-800 mb-8">inspiration for your own kitchen</p>
+      <a 
+        href="https://mayagreenfeld.substack.com/" 
+        target="_blank"
+        class="inline-block bg-pink-900 text-white px-8 py-3 rounded-lg hover:bg-pink-800 transition-colors"
+      >
+        Subscribe to my Newsletter
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-pink-200 py-16">
+    <div class="max-w-2xl mx-auto px-8 sm:px-12 lg:px-8 text-center">
+      <h2 class="text-3xl font-semibold text-pink-900 mb-4">reach out</h2>
+      <a 
+        href="mailto:mayagreenfeld@gmail.com"
+        class="text-lg text-pink-900 hover:text-pink-800 transition-colors"
+      >
+        mayagreenfeld@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <!-- Social Links Section -->
+  <section class="bg-pink-50 py-16">
+    <div class="max-w-2xl mx-auto px-8 sm:px-12 lg:px-8 text-center">
+      <h2 class="text-3xl font-semibold text-pink-900 mb-8">see you on social</h2>
+      <div class="flex justify-center space-x-8">
+        <a 
+          href="https://www.instagram.com/mouthfulbymaya?igsh=dHBidHFmMm5oZTY2&utm_source=qr"
+          target="_blank"
+          class="text-pink-800 hover:text-pink-900 transition-colors"
+        >
+          <Icon name="mdi:instagram" class="w-8 h-8" />
+        </a>
+        <a 
+          href="https://www.tiktok.com/@mouthfulbymaya?_t=ZT-8x9OgVHfT1H&_r=1"
+          target="_blank"
+          class="text-pink-800 hover:text-pink-900 transition-colors"
+        >
+          <Icon name="ic:baseline-tiktok" class="w-8 h-8" />
+        </a>
+        <a 
+          href="https://mayagreenfeld.substack.com/"
+          target="_blank"
+          class="text-pink-800 hover:text-pink-900 transition-colors"
+        >
+          <Icon name="mdi:email-outline" class="w-8 h-8" />
+        </a>
+        <a 
+          href="http://linkedin.com/in/maya-greenfeld-23926017a/"
+          target="_blank"
+          class="text-pink-800 hover:text-pink-900 transition-colors"
+        >
+          <Icon name="mdi:linkedin" class="w-8 h-8" />
+        </a>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </Layout>
