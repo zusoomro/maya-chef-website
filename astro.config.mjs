@@ -9,8 +9,8 @@ export default defineConfig({
     tailwind(), 
     icon({
       include: {
-        mdi: ['*'],
-        ic: ['*']
+        mdi: ['instagram', 'email-outline', 'linkedin'],
+        ic: ['baseline-tiktok']
       }
     })
   ]
