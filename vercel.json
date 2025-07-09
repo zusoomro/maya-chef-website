@@ -1,6 +1,0 @@
-{
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm ci --no-audit --no-fund --verbose",
-  "framework": "astro"
-}
